@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/index.css">
@@ -79,9 +80,41 @@
 
         <!-- Floating Cart Bar (Visible when items > 0) -->
         <div class="cart-bar glass glow-primary" id="floating-cart">
-            <div class="cart-count">2</div>
+            <div class="cart-count">0</div>
             <span class="cart-text">Ver Mi Pedido</span>
-            <span class="cart-total">$20.700</span>
+            <span class="cart-total">$0</span>
+        </div>
+
+        <!-- Cart View Overlay -->
+        <div class="cart-overlay glass hidden" id="cart-view">
+            <div class="cart-header">
+                <button id="close-cart" class="icon-btn">
+                    <span class="material-icons-round">expand_more</span>
+                </button>
+                <h2>Mi Pedido</h2>
+                <div style="width: 40px;"></div>
+            </div>
+            
+            <div class="cart-items" id="cart-items-list">
+                <!-- Items will be injected here -->
+                <p class="empty-msg">Tu carrito está vacío</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total</span>
+                        <span id="cart-final-total">$0</span>
+                    </div>
+                </div>
+                <button class="confirm-btn glow-primary" id="checkout-btn">
+                    Confirmar Pedido
+                </button>
+            </div>
         </div>
 
         <footer style="text-align: center; color: var(--text-dim); padding: 2rem; font-size: 0.8rem;">
